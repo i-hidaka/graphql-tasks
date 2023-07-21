@@ -15,7 +15,7 @@ model Task {
   name String @db.VarChar(255)
   dueDate String @db.VarChar(10)
   status Status @default(NOT_STARTED)
-  descriptions String?
+  description String?
   createdAt DateTime @default(now()) @db.Timestamp(0)
   updatedAt DateTime @updatedAt @db.Timestamp(0)
 }

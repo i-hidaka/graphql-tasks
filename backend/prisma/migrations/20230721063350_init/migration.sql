@@ -7,7 +7,7 @@ CREATE TABLE "Task" (
     "name" VARCHAR(255) NOT NULL,
     "dueDate" VARCHAR(10) NOT NULL,
     "status" "Status" NOT NULL DEFAULT 'NOT_STARTED',
-    "descriptions" TEXT,
+    "description" TEXT,
     "createdAt" TIMESTAMP(0) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(0) NOT NULL,
 
