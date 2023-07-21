@@ -1,4 +1,5 @@
 import { ObjectType, Field, Int } from '@nestjs/graphql';
+import { Status } from '@prisma/client';
 
 // クラスからGraphqlスキーマを作成する
 @ObjectType()
@@ -14,9 +15,15 @@ export class Task {
   dueDate: string;
 
   @Field()
-  status: 'NOT_STARTED' | 'IN_PROGRESS' | 'COMPLETED';
+  status: Status;
 
   // nullを許容
   @Field({ nullable: true })
   description: string;
+
+  @Field()
+  createdAt: Date;
+
+  @Field()
+  updatedAt: Date;
 }
